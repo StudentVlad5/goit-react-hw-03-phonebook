@@ -1,4 +1,5 @@
 import React,{Component} from "react";
+import propTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 
 let INISHIAL_STATE = {
@@ -69,3 +70,9 @@ resetForm = () => this.setState(INISHIAL_STATE)
 }  
 
 export default ContactForm
+
+ContactForm.propTypes = {
+    state: propTypes.arrayOf(
+        propTypes.string
+    )
+}
