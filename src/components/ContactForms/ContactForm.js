@@ -23,7 +23,8 @@ handleFormSubmit = (event) => {
     const {onAdd} = this.props;
     const isValidateForm = this.validateForm();
     if(!isValidateForm)return 
-    onAdd({id:id,name, phone})
+    onAdd({id:id,name, phone});
+    this.resetForm()
 }
 
 validateForm = () => {
